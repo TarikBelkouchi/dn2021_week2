@@ -27,6 +27,22 @@ namespace ArrayDemo2
             return -1;
         }
 
+        public static bool GoAgain()
+        {
+            
+            Console.WriteLine("Would you like to go again?");
+            string entry = Console.ReadLine();
+            if(entry.ToLower() == "n")
+            {
+                return false;
+            }
+            if (entry.ToLower() == "y")
+            {
+                return true;
+            }
+            Console.WriteLine("I'm sorry I don't know what you mean.");
+        }
+
 
         public static void Main(string[] args)
         {
