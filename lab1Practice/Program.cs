@@ -7,6 +7,10 @@ namespace lab1Practice
 
         public static bool GoAgain()
         {
+            while (true)
+            {
+
+           
 
             Console.WriteLine("Would you like learn about another student?");
             string entry = Console.ReadLine();
@@ -16,15 +20,20 @@ namespace lab1Practice
             {
                 return false;
             }
-            if (entry.ToLower() == "y")
-            {
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("Not a valid answer!");
-                return false;
-            }
+                if (entry.ToLower() == "y")
+                {
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Not a valid answer!");
+                    return false;
+                }
+
+
+
+              }
+
         }
 
 
@@ -43,8 +52,9 @@ namespace lab1Practice
                     do
                     {
 
-                        Console.WriteLine("Which student would you like information on?");
+                        Console.WriteLine("Which student would you like information on another student?");
                         entry = Console.ReadLine();
+
                         num = int.Parse(entry);
 
                         if (num >=1 && num <= 4)

@@ -82,17 +82,68 @@ namespace StudentDatabase
                 Console.WriteLine("Not a valid selection.");
             }
 
-
-            string entry2 = Console.ReadLine();
-            if (entry2.ToLower() == "hometown")
+            do
             {
-                return homeTown;
+                string entry = "";
+                int num = 0;
+                bool validEntry = false;
+                do
+                {
+
+                    Console.WriteLine("Which student would you like information on another student?");
+                    entry = Console.ReadLine();
+
+
+
+                    num = int.Parse(entry);
+
+                    if (num >= 1 && num <= 4)
+                    {
+                        validEntry = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter a number between 1- 4.");
+                    }
+
+                } while (validEntry == false);
+
+
+                Console.WriteLine(name[num]);
+
+
+                validEntry = false;
+
+                do
+                {
+                    Console.WriteLine("Which Category? Please entr hometown or favorite food:  ");
+                    entry = Console.ReadLine();
+                    if (entry == "hometown")
+                    {
+                        Console.WriteLine($"{name[num]} is from {homeTown[num]}.");
+                        validEntry = true;
+                    }
+                    else if (entry == "favorite food")
+                    {
+                        Console.WriteLine($"{name[num]}'s favorite food is {favFood[num]}.");
+                        validEntry = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter hometown or favorite food: ");
+                    }
+
+                }
+                while (validEntry == false);
+
             }
-
-
-
-
+            while (GoAgain());
 
         }
     }
 }
+
+
+
+
+
