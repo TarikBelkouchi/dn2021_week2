@@ -44,7 +44,7 @@ namespace ShoppingList
             menu["dragonfruit"] = 2.19m;
             menu["Elderberry"] = 1.79m;
             menu["figs"] = 2.09m;
-            menu["grapfruit"] = 1.99m;
+            menu["grapefruit"] = 1.99m;
             menu["honeydew"] = 3.49m;
 
 
